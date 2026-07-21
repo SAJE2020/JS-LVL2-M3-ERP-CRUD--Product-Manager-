@@ -40,6 +40,16 @@ saveBtn.addEventListener("click", function () {
         price: productPrice.value,
         quantity: productQuantity.value
     };
+     if (product.name === ""){
+        message.textContent = "Please enter a product name.";
+        return;
+    }else if (product.price === ""){
+        message.textContent = "Please enter a product price.";
+        return;
+    }else if (product.quantity === ""){
+        message.textContent = "Please enter a product quantity.";
+        return;
+    }
 
     if (editindex === null) {
         products.push(product);
